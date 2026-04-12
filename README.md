@@ -20,7 +20,7 @@ It then opens whatever editor you have configured as your [git core.editor](http
 
 Different enterprises are signing their employees up for different agentic coding tools — [GitHub Copilot], [GitLab Duo Agent Platform], [Claude Code], [Kiro], [Amazon Bedrock], and _so many more_. Perhaps you, like me, use _several_ of them.
 
-Use whatever your enterprise has approved and given you credentials for. These enterprise contracts have all of the IP details in them so that you're not sending proprietary information somewhere you shouldn't[^1][^2][^3][^4][^5][^6][^7][^8].
+Use whatever your enterprise has approved and given you credentials for. These enterprise contracts have all of the IP details in them so that you're not sending proprietary information somewhere you shouldn't.[^1][^2][^3][^4][^5][^6][^7][^8]
 
 ## Opinions strongly held
 
