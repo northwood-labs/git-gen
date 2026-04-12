@@ -20,7 +20,7 @@ It then opens whatever editor you have configured as your [git core.editor](http
 
 Different enterprises are signing their employees up for different agentic coding tools — [GitHub Copilot], [GitLab Duo Agent Platform], [Claude Code], [Kiro], [Amazon Bedrock], and _so many more_. Perhaps you, like me, use _several_ of them.
 
-Use whatever your enterprise has approved and given you credentials for. These enterprise contracts have all of the IP details in them so that you're not sending proprietary information somewhere you shouldn't[^1][^2][^3][^4][^5][^6][^7][^8].
+Use whatever your enterprise has approved and given you credentials for. These enterprise contracts have all of the IP details in them so that you're not sending proprietary information somewhere you shouldn't.[^1][^2][^3][^4][^5][^6][^7][^8]
 
 ## Opinions strongly held
 
@@ -124,11 +124,11 @@ We're working on it, but no promises at this stage. Local models are great for p
 [Kiro]: https://kiro.dev
 [Conventional Commits]: https://www.conventionalcommits.org/en/v1.0.0/
 
-[^1]: <https://www.theatlantic.com/politics/archive/2025/03/trump-administration-accidentally-texted-me-its-war-plans/682151/>
-[^2]: <https://www.washingtonpost.com/politics/interactive/2025/trump-administration-signal-chat-leak-response/>
-[^3]: <https://www.politifact.com/factchecks/2025/mar/26/pete-hegseth/fact-checking-pete-hegseths-false-statement-that-n/>
-[^4]: <https://www.courtlistener.com/docket/69788832/american-oversight-v-hegseth/>
-[^5]: <https://www.anthropic.com/news/statement-comments-secretary-war>
-[^6]: <https://www.politico.com/news/2026/01/27/cisa-madhu-gottumukkala-chatgpt-00749361>
-[^7]: <https://arstechnica.com/tech-policy/2026/01/us-cyber-defense-chief-accidentally-uploaded-secret-government-info-to-chatgpt/>
-[^8]: <https://cybersecuritynews.com/hacker-uses-claude-and-chatgpt-to-breach/>
+[^1]: [The Trump Administration Accidentally Texted Me Its War Plans](https://www.theatlantic.com/politics/archive/2025/03/trump-administration-accidentally-texted-me-its-war-plans/682151/) (The Atlantic)
+[^2]: [How the Trump administration has downplayed the Signal chat scandal](https://www.washingtonpost.com/politics/interactive/2025/trump-administration-signal-chat-leak-response/) (Washington Post)
+[^3]: [Fact checking Pete Hegseth’s false statements](https://www.politifact.com/factchecks/2025/mar/26/pete-hegseth/fact-checking-pete-hegseths-false-statement-that-n/) (Politifact)
+[^4]: [American Oversight v. Hegseth, 1:25-cv-00883, (D.D.C.)](https://www.courtlistener.com/docket/69788832/american-oversight-v-hegseth/) (CourtListener)
+[^5]: [Statement on the comments from Secretary of War Pete Hegseth](https://www.anthropic.com/news/statement-comments-secretary-war) (Anthropic)
+[^6]: [Trump’s acting cyber chief uploaded sensitive files into a public version of ChatGPT](https://www.politico.com/news/2026/01/27/cisa-madhu-gottumukkala-chatgpt-00749361) (Politico)
+[^7]: [US cyber defense chief accidentally uploaded secret government info to ChatGPT](https://arstechnica.com/tech-policy/2026/01/us-cyber-defense-chief-accidentally-uploaded-secret-government-info-to-chatgpt/) (Ars Technica)
+[^8]: [Hacker Uses Claude and ChatGPT to Breach Multiple Government Agencies](https://cybersecuritynews.com/hacker-uses-claude-and-chatgpt-to-breach/) (Cyber Security News)
