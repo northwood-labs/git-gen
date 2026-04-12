@@ -179,6 +179,52 @@ case "${GITGEN_PROVIDER}" in
       "${FILE_CHANGES_PROMPT}\n\n${INPUT_FOR_CHUNK}" 2>/dev/null || true)"
     ;;
 
+  "ollama")
+    ##
+    # NOT WORKING CONSISTENTLY YET
+    ##
+
+    if ! command -v ollama >/dev/null 2>&1; then
+      echo "Error: 'ollama' command not found. Please install Ollama to use this provider."
+      echo "  https://ollama.com"
+      echo ""
+      echo "Run ... by itself to complete any initial setup steps, such as logging "
+      echo "in or selecting a default model, before using this script."
+      exit 1
+    fi
+
+    # Override the defaults for local Ollama
+    GITGEN_MODEL_OLLAMA="${GITGEN_MODEL_OLLAMA:-git-committer:9b}" # Default model for commit message generation
+    echo "Generating commit message using Ollama and model ${GITGEN_MODEL_OLLAMA}..." > /dev/stderr
+
+    OLLAMA_TEMP_FILE="$(mktemp)";
+    # Ollama doesn't use the prompt above because it's baked into the modified model. Only pass the diffs.
+    printf "The following is information about the changes:\n\n%s\n" "${INPUT_FOR_CHUNK}" > "${OLLAMA_TEMP_FILE}"
+
+    # Use Ollama
+    # FINAL_COMMIT_MESSAGE="$(cat "${OLLAMA_TEMP_FILE}" \
+    #   | ollama run \
+    #       "${GITGEN_MODEL_OLLAMA}" \
+    #       --keepalive 30m \
+    #       --hidethinking \
+    #       --nowordwrap \
+    #       2>/dev/null || true)"
+
+    # BUG: It seems to be cutting-off mid thinking, before it has a chance to output.
+    #   * Context limit?
+    #   * Ollama timeout?
+    #   * Keepalive setting?
+    echo "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+    echo "${OLLAMA_TEMP_FILE}"
+    cat "${OLLAMA_TEMP_FILE}" \
+      | ollama run \
+          "${GITGEN_MODEL_OLLAMA}" \
+          --keepalive 10m \
+          --nowordwrap
+    echo "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+
+    ;;
+
   *)
     echo "Error: Unsupported GITGEN_PROVIDER '${GITGEN_PROVIDER}'. Supported providers are: claude, copilot, kiro."
     exit 1
