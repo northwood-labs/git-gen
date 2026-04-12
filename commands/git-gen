@@ -185,7 +185,7 @@ case "${GITGEN_PROVIDER}" in
     ;;
 esac
 
-printf "\n\n%s\n\n" "${FINAL_COMMIT_MESSAGE}"
+# printf "\n\n%s\n\n" "${FINAL_COMMIT_MESSAGE}"
 
 FINAL_COMMIT_MESSAGE="$(
   printf "%s" "${FINAL_COMMIT_MESSAGE}" \
@@ -196,8 +196,7 @@ FINAL_COMMIT_MESSAGE="$(
 )"
 
 TEMP_FILE="$(mktemp)";
-printf "%s\n" "${FINAL_COMMIT_MESSAGE}" > "${TEMP_FILE}"
-echo "${TEMP_FILE}"
+# printf "%s\n" "${FINAL_COMMIT_MESSAGE}" > "${TEMP_FILE}"
 
 if git commit --file="${TEMP_FILE}" --edit "$@"; then
   rm "${TEMP_FILE}"
