@@ -111,6 +111,14 @@ The default model is _Claude Haiku 4.5_. It's smart, fast, cheap, and is availab
 
 If you'd prefer a different model, you can set `GITGEN_MODEL` to a model that your provider understands, and we'll pass it through to the CLI.
 
+## What about local models?
+
+We're working on it, but no promises at this stage. Local models are great for privacy, but require more effort:
+
+* more finagling to get working properly.
+* adjustments to model sizes to work across a variety of machines.
+* ensuring the local system has enough RAM to run the model.
+
 [Amazon Bedrock]: https://aws.amazon.com/bedrock/
 [Claude Code]: https://claude.com/product/claude-code
 [GitHub Copilot]: https://github.com/features/copilot/agents
