@@ -35,6 +35,9 @@ If you want something different, feel free to fork. You are free to change the s
 
 ## Configuring
 
+> [!NOTE]
+> Any `git-whatever` command that you have on your `$PATH` can be accessed with `git whatever`. After cloning, add the **directory** which contains the `git-gen` file to your `$PATH`.
+
 `git-gen` supports a few different providers, and a few different models for handling the generation.
 
 > [!WARNING]
